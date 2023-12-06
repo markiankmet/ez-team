@@ -1,0 +1,233 @@
+﻿<UserControl x:Class="FullApp.View.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FullApp.View"
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             mc:Ignorable="d" 
+             d:DesignHeight="590" d:DesignWidth="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    x:Name="btnNotifications"
+                    Command=""
+                    Cursor="Hand">
+
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="{StaticResource panelOverColor}"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="360" Height="270"
+                                CornerRadius="15"
+                                Background="{TemplateBinding Background}">  
+                            <ContentPresenter VerticalAlignment="Top"
+                              HorizontalAlignment="Left"
+                                              Margin="20"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="Notifications"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   FontFamily="Montserrat"
+                                   Margin="0 0 0 100"/>
+
+                        <TextBlock>
+            <fa:IconImage Icon="Message"
+                          Width="70"
+                          Foreground="White"
+                          Margin="20 0 0 0"/>
+                        </TextBlock>
+                    </StackPanel>
+
+                </Grid>
+
+            </Button>
+
+
+            <Button Grid.Column="1"
+                    x:Name="btnPrivacy"
+                    Command=""
+                    Cursor="Hand">
+
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="{StaticResource panelOverColor}"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="360" Height="270"
+                    CornerRadius="15"
+                    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Top"
+                  HorizontalAlignment="Left"
+                                  Margin="20"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="Privacy"
+                       Foreground="White"
+                       FontSize="16"
+                       FontFamily="Montserrat"
+                       Margin="0 0 0 100"/>
+
+                        <TextBlock>
+                            <fa:IconImage Icon="Lock"
+                                          Width="60"
+                                          Foreground="White"
+                                          Margin="20 0 0 0"/>
+                        </TextBlock>
+                    </StackPanel>
+
+                </Grid>
+
+
+            </Button>
+
+
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    x:Name="btnSecurity"
+                    Command=""
+                    Cursor="Hand">
+
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="{StaticResource panelOverColor}"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="360" Height="270"
+                        CornerRadius="15"
+                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Top"
+                      HorizontalAlignment="Left"
+                                      Margin="20"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="Security"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   FontFamily="Montserrat"
+                                   Margin="0 0 0 100"/>  
+
+                        <TextBlock>
+            <fa:IconImage Icon="Shield"
+                          Width="70"
+                          Foreground="White"
+                          Margin="20 0 0 0"/>
+                        </TextBlock>
+                    </StackPanel>
+
+                </Grid>
+
+
+
+            </Button>
+
+            <Button Grid.Column="1"
+                    x:Name="btnLocation"
+                    Command=""
+                    Cursor="Hand">
+
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="{StaticResource panelOverColor}"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="360" Height="270"
+                                CornerRadius="15"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Top"
+                                              HorizontalAlignment="Left"
+                                              Margin="20"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="Location"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   FontFamily="Montserrat"
+                                   Margin="0 0 0 100"/>
+
+                        <TextBlock>
+                            <fa:IconImage Icon="LocationDot"
+                                          Width="60"
+                                          Foreground="White"
+                                          Margin="20 0 0 0"/>
+                        </TextBlock>
+                    </StackPanel>
+                    
+                </Grid>
+                
+                
+            </Button>
+
+        </Grid>
+
+    </Grid>
+</UserControl>
