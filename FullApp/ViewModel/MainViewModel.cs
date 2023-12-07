@@ -77,7 +77,8 @@ namespace FullApp.ViewModel
         public ICommand ShowCustomerViewCommand { get; }
         public ICommand ShowSettingsViewCommand { get; }
         public ICommand ShowStudyingViewCommand { get; }
-        //public ICommand ShowLevel_1_ViewCommand { get; }
+
+        public ICommand ShowLevel_1_ViewCommand { get; }
         public ICommand ShowProfileViewCommand { get; }
         public MainViewModel()
         {
@@ -91,6 +92,7 @@ namespace FullApp.ViewModel
             ShowProfileViewCommand = new ViewModelCommand(ExecuteShowProfileViewCommand);
             //ShowLevel_1_ViewCommand = new ViewModelCommand(ExecuteShowLevel_1_ViewCommand);
             
+
             //Default view
             ExecuteShowStudyingViewCommand(null);
             LoadCurrentUserData();
@@ -136,7 +138,13 @@ namespace FullApp.ViewModel
             Caption = "Studying";
             Icon = IconChar.ChalkboardTeacher;
         }
-
+        
+        //private void ExecuteShowLevel_1_ViewCommand(object obj)
+        //{
+        //    CurrentChildView = new Level_1_ViewModel();
+        //    Caption = "Level_1";
+        //    Icon = IconChar.ChalkboardTeacher;
+        //}
 
         private void LoadCurrentUserData()
         {

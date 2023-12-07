@@ -14,7 +14,7 @@ namespace FullApp.Repositories
 
         public RepositoryBase()
         {
-            _connectionString = "Host=localhost;Port=5432;User Id=postgres;Password=MARIK2016;Database=signlanguage";
+            _connectionString = "Host=localhost;Port=5432;User Id=postgres;Password=qwerty;Database=signlanguage";
         }
 
         protected NpgsqlConnection GetConnection()
